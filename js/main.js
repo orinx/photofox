@@ -5,14 +5,22 @@ window.onload = function(){
 
 function readFiles(files){
     var formData = new FormData();
-
-    for (var i = 0, file; file = files[i]; ++i) {
+//no need to support multi file
+/*    for (var i = 0, file; file = files[i]; ++i) {
         formData.append(file.name, file);
-      }
+    }
+*/
+    formData.append(files[0].name, files[0]);
 
     var xhr = new XMLHttpRequest();
     xhr.open('POST', './data.php', true);
-//    xhr.onload = function(e) { ... };
+    xhr.onload = function(e) {
+//      alert(this.responseText);
+        var rst = JSON.parse(this.responseText);
+//        alert(rst.file0.link);
+        document.getElementById("linkBox").value = rst.file0.link;
+        document.getElementById("linkBox").style.display ="";
+    };
 
     xhr.send(formData);  // multipart/form-data
 }

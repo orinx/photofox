@@ -1,0 +1,22 @@
+{
+  "version": "1.0",
+  "name": "PhotoFox image uploader",
+  "description": "nothing here",
+  "launch_path": "/photofox/index.html",
+  "icons": {
+    "16": "/photofox/img/icon-16.png",
+    "48": "/photofox/img/icon-48.png",
+    "128": "/photofox/img/icon-128.png"
+  },
+  "developer": {
+    "name": "Orin Chen",
+    "url": "http://mozillians.com/u/orinx"
+  },
+  "installs_allowed_from": [
+    "https://marketplace.firefox.com",
+    "http://rasengan.im",
+    "http://localhost"
+  ],
+  ",
+  "default_locale": "en"
+}
